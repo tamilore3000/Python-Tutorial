@@ -25,14 +25,14 @@ def weight_converter(w):
     return converted
 
 
-def height_converter(w):
+def height_converter(h):
     global converted
-    height_unit = input("What is the weight unit meters or feet: ")
+    height_unit = input("what is the height unit meters or feet: ")
     if height_unit.upper() == "METERS":
-        converted = w / 1  
+        converted = h / 1  
         print("height in meters is: ", converted)
     elif height_unit.upper() == "FEET":
-        converted = w / 3.281
+        converted = h / 3.281
         print("height in meters is: ", converted)
     return converted
 

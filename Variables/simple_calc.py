@@ -1,5 +1,14 @@
-first = float(input("Enter First Number: "))
-second = float(input("Enter Second Number: "))
+# first = float(input("Enter First Number: "))
+# second = float(input("Enter Second Number: "))
+#
+# sum = first + second
+# print("The sum is ", sum)
 
-sum = first + second 
-print("The sum is ", sum)
+try:
+    x=int(input('Enter a number upto 100: '))
+    if x > 100:
+        raise ValueError(x)
+except ValueError:
+    print(x, "is out of allowed range")
+else:
+    print(x, "is within the allowed range")
