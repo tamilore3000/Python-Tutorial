@@ -1,7 +1,6 @@
 # BMI CALCULATOR IN PYTHON
 import os
-from datetime import date     # FYI, I revised this a bit as well for the date
-
+from datetime import date
 # define our clear function
 def clear():
     # for windows
@@ -10,7 +9,6 @@ def clear():
     # for mac and linux(here, os.name is 'posix')
     else:
         _ = os.system('clear')
-
 def weight_converter(w):
     while True:
         try:
@@ -27,11 +25,10 @@ def weight_converter(w):
                 return converted            # Same here
             else:
                 raise ValueError(weight_unit)
-            break
+            
         except (ValueError, IOError, IndexError):
-            print("ERROR")
-            return 0.0
-
+            print("ERROR - Please enter proper unit of measure")
+            
 def height_converter(h):
     while True:
         try:
@@ -44,11 +41,11 @@ def height_converter(h):
                 converted = h / 3.281
                 print("height in meters is: ", converted)
                 return converted            # And finally here
-            break
+            else:
+                raise ValueError(height_unit)
         except(ValueError,IOError,IndexError):
-            print("ERROR")
-        return 1.0
-
+            print("ERROR - Please enter proper unit of measure")
+        
 while True:
     try:
         age = input("How old are you? ")
@@ -66,8 +63,6 @@ while True:
         # os.system(clock_settime)
         print("No valid integer! Please try again ...")
         clear()
-
-        
 BMI = float(wconverted / (hconverted ** 2))
 print("Your BMI is: ", BMI, "as of ", date.today())     # You had not defined the variable "date"
 print("You are using a", os.name, "system")
