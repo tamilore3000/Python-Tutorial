@@ -1,7 +1,6 @@
 # BMI CALCULATOR IN PYTHON
 import os
-from datetime import datetime
-
+from datetime import date     # FYI, I revised this a bit as well for the date
 
 # define our clear function
 def clear():
@@ -12,30 +11,43 @@ def clear():
     else:
         _ = os.system('clear')
 
-
 def weight_converter(w):
-    global converted
-    weight_unit = input("What is the weight unit Kgs or Lbs: ")
-    if weight_unit.upper() == "KG":
-        converted = w / 1  
-        print("weight in kg is: ", converted)
-    elif weight_unit.upper() == "LBS":
-        converted = w / 2.2
-        print("weight in kg is: ", converted)
-    return converted
-
+    while True:
+        try:
+            global converted
+            converted = 0
+            weight_unit = input("What is the weight unit Kgs or Lbs: ")
+            if weight_unit.upper() == "KG":
+                converted = w / 1
+                print("weight in kg is: ", converted)
+                return converted            # Made sure a decimal value was being returned
+            elif weight_unit.upper() == "LBS":
+                converted = w / 2.2
+                print("weight in kg is: ", converted)
+                return converted            # Same here
+            else:
+                raise ValueError(weight_unit)
+            break
+        except (ValueError, IOError, IndexError):
+            print("ERROR")
+            return 0.0
 
 def height_converter(h):
-    global converted
-    height_unit = input("what is the height unit meters or feet: ")
-    if height_unit.upper() == "METERS":
-        converted = h / 1  
-        print("height in meters is: ", converted)
-    elif height_unit.upper() == "FEET":
-        converted = h / 3.281
-        print("height in meters is: ", converted)
-    return converted
-
+    while True:
+        try:
+            height_unit = input("what is the height unit meters or feet: ")
+            if height_unit.upper() == "METERS":
+                converted = h / 1
+                print("height in meters is: ", converted)
+                return converted            # And here
+            elif height_unit.upper() == "FEET":
+                converted = h / 3.281
+                print("height in meters is: ", converted)
+                return converted            # And finally here
+            break
+        except(ValueError,IOError,IndexError):
+            print("ERROR")
+        return 1.0
 
 while True:
     try:
@@ -49,15 +61,13 @@ while True:
         height = input("What is your height: ")
         height = float(height)
         hconverted = height_converter(height)
-
         break
     except ValueError:
         # os.system(clock_settime)
         print("No valid integer! Please try again ...")
         clear()
 
-
-date = datetime.now()
+        
 BMI = float(wconverted / (hconverted ** 2))
-print("Your BMI is: ", BMI, "as of ", date) 
+print("Your BMI is: ", BMI, "as of ", date.today())     # You had not defined the variable "date"
 print("You are using a", os.name, "system")
