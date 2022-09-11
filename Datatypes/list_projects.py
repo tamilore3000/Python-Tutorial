@@ -18,8 +18,8 @@ while True:
                 try:
                     number = int(input("Enter Integer: "))
                     myarray.append(number)
-                    i += 1
-                except (ValueError, IndexError):
+                    i += 1 
+                except (  ValueError, IndexError):
                     print("Wrong Element Inputed")    
         else :
             raise ValueError(n)

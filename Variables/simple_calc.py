@@ -1,8 +1,10 @@
-# first = float(input("Enter First Number: "))
-# second = float(input("Enter Second Number: "))
-#
-# sum = first + second
-# print("The sum is ", sum)
+first = float(input("Enter First Number: "))
+second = float(input("Enter Second Number: "))
+
+sum = first + second
+print("The sum is ", round(sum))
+
+#abs returns postive numbers 
 
 try:
     x=int(input('Enter a number upto 100: '))

@@ -1,9 +1,8 @@
 i = 0
-n = float(input("How many times do you want to loop: "))
-while i < n:
-    i += 1
-    sum = 0
-    print(i, "boooom")
-    sum = sum + i
-    print(sum)
+numbers = [1,2,3,5,5]
+while i < len(numbers):
+    print(i,"-",numbers[i])
+    i = i + 1
+print("Done")
+
     
