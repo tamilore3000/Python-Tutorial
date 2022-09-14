@@ -8,4 +8,4 @@ for x_count in numbers:
     shape = ""
     for item in range(x_count):
         shape += "x"
-    print(shape)
+    print(shape) 

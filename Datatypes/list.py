@@ -9,7 +9,9 @@ print(name_caps)
 
 # for name in name_caps: # To print out the elements one per line 
 #     print(name)
-
+nicknames = names.copy()
+nicknames.insert(3, "Tammy")
+print(nicknames)
 sentence = " " .join(names)
 print(print("To print the elements joined together"),sentence)
 names.pop()
