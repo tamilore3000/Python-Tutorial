@@ -1,10 +1,11 @@
 names = ["matilda", "sheldon", "Carlsen", "Kasparov", "Penny", "Daenerys", "Targaryen", "Aegon", "Mufasa"]
-names.insert(0 ,"David")
-print("David" in names , " -Checks if an index exists") # Checks if an index exists 
+names.insert(0, "David")
+print("David" in names, " -Checks if an index exists")  # Checks if an index exists
 names.sort()
 
+
 # To capitalize lists in  python
-name_caps = [name.capitalize() for name in names]
+name_caps = [name.capitalize() for name in names]  # This is list Comprehension
 print(name_caps)
 
 # for name in name_caps: # To print out the elements one per line 
@@ -12,8 +13,8 @@ print(name_caps)
 nicknames = names.copy()
 nicknames.insert(3, "Tammy")
 print(nicknames)
-sentence = " " .join(names)
-print(print("To print the elements joined together"),sentence)
+sentence = " ".join(names)
+print(print("To print the elements joined together"), sentence)
 names.pop()
 print(names)
 names.remove("Targaryen")

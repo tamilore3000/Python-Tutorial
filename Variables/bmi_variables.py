@@ -63,6 +63,9 @@ while True:
         # os.system(clock_settime)
         print("No valid integer! Please try again ...")
         clear()
-BMI = float(wconverted / (hconverted ** 2))
-print("Your BMI is: ", BMI, "as of ", date.today())     # You had not defined the variable "date"
-print("You are using a", os.name, "system") 
+try: 
+    BMI = float(wconverted / (hconverted ** 2))
+    print("Your BMI is: ", BMI, "as of ", date.today())     # You had not defined the variable "date"
+    print("You are using a", os.name, "system") 
+except ZeroDivisionError:
+    print("Can not divide,\nZero Division Error .")
