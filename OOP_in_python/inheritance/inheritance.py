@@ -9,7 +9,7 @@ class Mammal:
         self.sex = sex
 
     def walk(self):
-        print("walk")
+        print("walking")
 
 class Dog(Mammal):
    def bark(self):
@@ -20,7 +20,7 @@ class Cat(Mammal):
 
 dog1 = Dog(name="Bingo", specie= "German Shepard", age=12, color="Brown", sex="Male")
 print(f"The name of my dog is {dog1.name}, he is a {dog1.sex} {dog1.specie}, {dog1.color} in color")
-dog1.walk()
+dog1.bark()
 cat1 = Cat.walk(self="pass")
 
 
