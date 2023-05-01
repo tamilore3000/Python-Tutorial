@@ -10,7 +10,7 @@ monthConventions = {
     "Oct": "October"
 }
 
-print(monthConventions.get("jan"))
+print(monthConventions.get("Jan"))
 
 customer = {
     "name": "Tamilore Targaryen",
