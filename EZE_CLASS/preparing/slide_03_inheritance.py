@@ -16,3 +16,51 @@ class Sun:
 class Moon (Sun): # Inheritance statement
     def __init__(self):
         pass
+
+# QUE 8: Create four classes called A, B, C and D such that B inherits from A, C
+# inherits from B, while D inherits C and A in that order. The constructor methods
+# should be populated with pass statements. Moreover, the design should contain
+# comment statements showing the type of inheritance in operation, then executed.
+
+class A: # inherit_abcd.py
+    def __init__(self):
+        pass
+#Single Level Inheritance
+class B(A):
+    def __init__(self):
+        pass
+#Multi-Level Inheritance
+class C (B):
+    def __init__(self):
+        pass    
+#Multiple Inheritance
+class D (C, A):
+    def __init__(self):
+        pass
+
+# Create two Python Programs called b4overide.py
+# and afteroveride.py to illustrate Overriding in Python.
+
+#b4overide 
+class King:
+    def action():
+        print("King in the north")
+
+class Prince(King):
+    pass
+
+x = Prince
+x.action()
+
+#afteroveride 
+
+class NedStark():
+    def status():
+        print("King in the North")
+
+class JonSnow(NedStark):
+    def status():
+        print("The new King in the north")
+
+y = JonSnow
+y.status()

@@ -8,7 +8,7 @@ class My_class(object):
 
     def my_method(self):
         """The method's docstring is here. The method is the function defined for the class"""
-
+print(__doc__)
 print(My_class.__doc__)
 print(My_class.my_method.__doc__)
 
