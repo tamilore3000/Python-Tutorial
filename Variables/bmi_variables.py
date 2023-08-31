@@ -2,14 +2,14 @@
 import os
 from datetime import date
 
-# define our clear function
-def clear():
-    # for windows
-    if os.name == 'nt':
-        os.system('cls')
-    # for mac and linux(here, os.name is 'posix')
-    else:
-        _ = os.system('clear')
+# # define our clear function
+# def clear():
+#     # for windows
+#     if os.name == 'nt':
+#         os.system('cls')
+#     # for mac and linux(here, os.name is 'posix')
+#     else:
+#         _ = os.system('clear')
 def weight_converter(w):
     while True:
         try:
